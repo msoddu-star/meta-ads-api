@@ -4,6 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors({ origin: '*' }));
+app.options('*', cors({ origin: '*' }));
 
 app.get('/campaigns', async (req, res) => {
   try {
