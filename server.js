@@ -22,7 +22,10 @@ app.get('/campaigns', async (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.send('Meta Ads API OK');
+  res.json({
+    message: 'Meta Ads API nuova versione',
+    routes: ['/campaigns']
+  });
 });
 
 app.listen(PORT, () => {
